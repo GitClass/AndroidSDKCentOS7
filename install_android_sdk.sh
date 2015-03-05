@@ -45,11 +45,11 @@ fi
 
 
 # Check if the ADB environment is set up.
-if grep -q $INSTADIR/platform-tools /etc/bashrc;
+if grep -q $INSTALLDIR/platform-tools /etc/bashrc;
 then
     echo "ADB environment already set up"
 else
-    echo "export PATH=$PATH:$INSTALLDIR/platform-tools" >> /etc/bashrc
+    echo "export PATH=\$PATH:$INSTALLDIR/platform-tools" >> /etc/bashrc
 fi
 
 # Set ddms symlink.
